@@ -1,4 +1,32 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --very-desaturated-blue: hsl(224, 23%, 55%);
+    --very-dark-blue: hsl(223, 47%, 23%);
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    background-color: var(--very-pale-blue);
+}
+
+.background {
+    height: 98dvh;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
 
 .attribution {
     font-size: 11px;
