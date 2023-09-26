@@ -15,18 +15,42 @@ body {
     font-family: "Red Hat Display", sans-serif;
     font-size: 16px;
     background-color: var(--very-pale-blue);
+    overflow: hidden;
 }
 
 .background {
-    height: 98dvh;
+    height: 97dvh;
+    width: 100%;
+    background-size: contain;
     background-image: url(/images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
 }
 
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
+    background-color: white;
+    width: clamp(320px, 90vw, 420px);
+    height: fit-content;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    border-radius: 10px;
 }
+
+.card-image-container>img {
+    width: 100%;
+}
+
+
+
 
 .attribution {
     font-size: 11px;
