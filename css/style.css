@@ -4,6 +4,7 @@
     --very-pale-blue: hsl(225, 100%, 98%);
     --very-desaturated-blue: hsl(224, 23%, 55%);
     --very-dark-blue: hsl(223, 47%, 23%);
+    --price-plan-bg: hsla(230, 75%, 98%, 1);
 }
 
 * {
@@ -35,22 +36,126 @@ body {
 
 .card {
     background-color: white;
-    width: clamp(320px, 90vw, 420px);
+    width: clamp(300px, 90vw, 400px);
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 2px 5px 40px 0px rgba(98, 75, 192, 0.25);
 }
 
 .card-image-container>img {
     width: 100%;
+    border-radius: 16px 16px 0 0;
 }
 
+.card-description-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 24px;
+    gap: 16px;
+}
 
+.card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.card-description>h1 {
+    color: var(--very-dark-blue);
+}
+
+.card-description>p {
+    color: var(--very-desaturated-blue);
+    font-size: clamp(16px, 2dvh, 20px);
+}
+
+.plan-pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--price-plan-bg);
+    border-radius: 10px;
+}
+
+.plan-pricing-description>h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.plan-pricing-description>p {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--very-desaturated-blue);
+}
+
+.plan-change-btn {
+    padding: 8px;
+}
+
+.plan-change-btn>a {
+    color: rgb(83, 0, 216);
+}
+
+.plan-change-btn>:hover {
+    text-decoration: none;
+    color: #766CF1;
+}
+
+.music-image-plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 19px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proceed,
+.cancel {
+    padding: 16px 32px;
+    font-family: "Red Hat Display", sans-serif;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.cancel {
+    background-color: white;
+    color: var(--very-desaturated-blue);
+}
+
+.proceed {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 2px 10px 10px 0px rgba(121, 90, 244, 0.25);
+}
+
+.proceed:hover {
+    background-color: #766CF1;
+    padding: 13px 29px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    font-size: 13px;
+    color: var(--very-dark-blue);
+    padding: 18px 35px;
+    cursor: pointer;
+}
 
 .attribution {
     font-size: 11px;
